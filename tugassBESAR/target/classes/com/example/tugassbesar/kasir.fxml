@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.tugassbesar.KasirAppController">
+    <top>
+        <HBox padding="10" style="-fx-background-color: #336699;">
+            <Label text="Program Kasir" style="-fx-text-fill: white; -fx-font-size: 24;"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="10" padding="10" style="-fx-background-color: #E0E0E0;">
+            <Label text="Daftar Produk" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+            <!-- Tambahkan tombol produk di sini sesuai dengan kebutuhan -->
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10" padding="10" style="-fx-background-color: #F0F0F0;">
+            <Label text="Transaksi Penjualan" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+            <ListView fx:id="transaksiListView" prefHeight="300"/>
+            <HBox spacing="10">
+                <Label text="Total: "/>
+                <TextField fx:id="totalField"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <right>
+        <VBox spacing="10" padding="10" style="-fx-background-color: #E0E0E0;">
+            <Label text="Pembayaran" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+            <HBox spacing="10">
+                <Label text="Bayar: "/>
+                <TextField fx:id="bayarField"/>
+            </HBox>
+            <Button text="Hitung Kembalian" onAction="#hitungKembalian"/>
+            <HBox spacing="10">
+                <Label text="Kembalian: "/>
+                <TextField fx:id="kembalianField"/>
+            </HBox>
+        </VBox>
+    </right>
+</BorderPane>
